@@ -88,8 +88,8 @@ npm install uglifycss -g
 
 ## Configure Nginx
 rm /etc/nginx/sites-enabled/rabbitsreviews
-mv /tmp/rabbitsreviews /etc/nginx/sites-available/rabbitsreviews
-ln -s /etc/nginx/sites-available/rabbitsreviews /etc/nginx/sites-enabled/rabbitsreviews
+mv /tmp/rabbitsreviews.conf /etc/nginx/sites-available/rabbitsreviews.conf
+ln -s /etc/nginx/sites-available/rabbitsreviews.conf /etc/nginx/sites-enabled/rabbitsreviews.conf
 
 service php7.0-fpm restart
 service nginx restart

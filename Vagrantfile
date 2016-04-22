@@ -43,10 +43,10 @@ Vagrant.configure(2) do |config|
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
 
-  config.vm.provider "virtualbox" do |vb|
-    vb.memory = "2048"
-    vb.cpus = 2
-  end
+  # config.vm.provider "virtualbox" do |vb|
+  #   vb.memory = "2048"
+  #   vb.cpus = 2
+  # end
 
   # View the documentation for the provider you are using for more
   # information on available options.
@@ -67,7 +67,7 @@ Vagrant.configure(2) do |config|
   # SHELL
 
   ## Add bootsrap
-  config.vm.provision "file", source: "config/nginx/sites-available/rabbitsreviews", destination: "/tmp/rabbitsreviews"
+  config.vm.provision "file", source: "conf/nginx/rabbitsreviews.conf", destination: "/tmp/rabbitsreviews.conf"
   config.vm.provision "shell", path: "bootstrap.sh"
 
   ### Forwarded ports
