@@ -90,5 +90,6 @@ Vagrant.configure(2) do |config|
   config.vm.network "private_network", ip: "192.168.50.7"
 
   ## Add the shared folder
-  config.vm.synced_folder "/home/olivier/projects/", "/var/www/html", type: "nfs"
+  config.vm.synced_folder "/CHANGE/THE/PATH/TO/projects/", "/var/www/html", type: "nfs"
 end
+
